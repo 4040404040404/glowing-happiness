@@ -1,7 +1,7 @@
 /**
  * Playwright Script to Execute the `finale()` Automation Workflow on Any Website
  * + Out-of-context `#accept-btn` clicker
- * + Stops the whole script fully (closes browser & exits process) if the website is `jolly-road-702644.puter.site`
+ * + Stops the whole script fully (closes browser & exits process) if the website is `kind-street-188208.puter.site`
  *
  * Setup:
  *   npm init -y
@@ -9,7 +9,7 @@
  *   npx playwright install chromium
  *
  * Run:
- *   node run-finale.js https://jolly-road-702644.puter.site
+ *   node run-finale.js https://kind-street-188208.puter.site
  */
 
 const { chromium } = require('playwright');
@@ -18,12 +18,12 @@ const { chromium } = require('playwright');
 const TARGET_URL =
   process.argv[2] ||
   process.env.TARGET_URL ||
-  'https://jolly-road-702644.puter.site';
+  'https://kind-street-188208.puter.site';
 
 const BROWSER_SCRIPT = () => {
   // ============================================================================
   // 1. OUT OF CONTEXT OF finale():
-  //    - Stop the whole script fully if website is jolly-road-702644.puter.site
+  //    - Stop the whole script fully if website is kind-street-188208.puter.site
   //    - Click document.querySelector("#accept-btn") independently
   // ============================================================================
   function stopAllTimersAndExecution() {
@@ -36,8 +36,8 @@ const BROWSER_SCRIPT = () => {
   }
 
   if (
-    window.location.hostname === 'jolly-road-702644.puter.site' ||
-    window.location.href.includes('jolly-road-702644.puter.site')
+    window.location.hostname === 'kind-street-188208.puter.site' ||
+    window.location.href.includes('kind-street-188208.puter.site')
   ) {
     stopAllTimersAndExecution();
     return;
@@ -50,8 +50,8 @@ const BROWSER_SCRIPT = () => {
 
   setInterval(() => {
     if (
-      window.location.hostname === 'jolly-road-702644.puter.site' ||
-      window.location.href.includes('jolly-road-702644.puter.site')
+      window.location.hostname === 'kind-street-188208.puter.site' ||
+      window.location.href.includes('kind-street-188208.puter.site')
     ) {
       stopAllTimersAndExecution();
       return;
@@ -399,16 +399,16 @@ const BROWSER_SCRIPT = () => {
 
       // Map domains to their Linkvertise IDs
       const DOMAIN_CONFIG = {
-        'jolly-road-702644.puter.site': '9578664',
+        'kind-street-188208.puter.site': '9578664',
         'witty-snake-472744.puter.site': '9578688',
         'kind-street-188208.puter.site': '9578706',
-        'honest-bee-81788.puter.site': '9578728',
-        'victorious-square-662213.puter.site': '9578742',
-        'relaxed-crab-648834.puter.site': '9578760',
-        'smart-mountain-937000.puter.site': '9578779',
-        'avid-mountain-909877.puter.site': '9578787',
-        'jolly-road-702644.puter.site': '9578798',
-        'jolly-road-702644.puter.site': '9578806',
+        'kind-street-188208.puter.site': '9578728',
+        'kind-street-188208.puter.site': '9578742',
+        'kind-street-188208.puter.site': '9578760',
+        'kind-street-188208.puter.site': '9578779',
+        'kind-street-188208.puter.site': '9578787',
+        'kind-street-188208.puter.site': '9578798',
+        'kind-street-188208.puter.site': '9578806',
       };
 
       // Get the appropriate Linkvertise ID for this domain
@@ -580,10 +580,10 @@ function attachPageHandlers(targetPage, browser) {
 
     const currentUrl = targetPage.url();
 
-    // 1. Out of context: If the website is jolly-road-702644.puter.site -> STOP THE WHOLE SCRIPT FULLY
-    if (currentUrl.includes('jolly-road-702644.puter.site')) {
+    // 1. Out of context: If the website is kind-street-188208.puter.site -> STOP THE WHOLE SCRIPT FULLY
+    if (currentUrl.includes('kind-street-188208.puter.site')) {
       console.log(
-        `[Playwright] Reached jolly-road-702644.puter.site (${currentUrl}) -> Stopping the whole script fully!`
+        `[Playwright] Reached kind-street-188208.puter.site (${currentUrl}) -> Stopping the whole script fully!`
       );
       await browser.close().catch(() => {});
       process.exit(0);
